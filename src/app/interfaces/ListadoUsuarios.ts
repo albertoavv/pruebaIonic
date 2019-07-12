@@ -11,6 +11,7 @@ export interface ListadoUsuarios {
   }
   
   export interface Result {
+    idx?: number;
     gender: string;
     name: Name;
     location: Location;
@@ -31,17 +32,17 @@ export interface ListadoUsuarios {
     thumbnail: string;
   }
   
-  interface Id {
+  export interface Id {
     name: string;
     value?: string;
   }
   
-  interface Dob {
+  export interface Dob {
     date: string;
     age: number;
   }
   
-  interface Login {
+  export interface Login {
     uuid: string;
     username: string;
     password: string;
@@ -51,7 +52,7 @@ export interface ListadoUsuarios {
     sha256: string;
   }
   
-  interface Location {
+  export interface Location {
     street: string;
     city: string;
     state: string;
@@ -60,17 +61,17 @@ export interface ListadoUsuarios {
     timezone: Timezone;
   }
   
-  interface Timezone {
+  export interface Timezone {
     offset: string;
     description: string;
   }
   
-  interface Coordinates {
+  export interface Coordinates {
     latitude: string;
     longitude: string;
   }
   
-  interface Name {
+  export interface Name {
     title: string;
     first: string;
     last: string;

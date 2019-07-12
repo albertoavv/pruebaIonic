@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsuariosService } from '../../services/usuarios.service';
+import { Result } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-usuario',
@@ -9,15 +10,16 @@ import { UsuariosService } from '../../services/usuarios.service';
 })
 export class UsuarioPage implements OnInit {
 
-  detalleUser: any = {};
+  detalleUser: any;
 
   constructor( private activatedRoute: ActivatedRoute, private _usuariosService: UsuariosService) {
     this.activatedRoute.params.subscribe( resp => {
       console.log(resp['id']);
-      this.detalleUser = this._usuariosService.getUsuario(resp['id']);
-      console.log(this.detalleUser);
-      
-      
+      this._usuariosService.getUsuario(resp['id']).subscribe( usuario => {
+        console.log(usuario);
+        this.detalleUser = usuario.results[0];
+      });
+
     })
    }
 

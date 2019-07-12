@@ -24,8 +24,8 @@ export class UsuariosPage implements OnInit {
     });
   }
 
-  verDetalle(id: number){
-    this.router.navigate( ['/usuario', id] );
+  verDetalle(idx: number){
+    this.router.navigate( ['/usuario', idx] );
   }
 
 }

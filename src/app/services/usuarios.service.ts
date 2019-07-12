@@ -16,8 +16,9 @@ export class UsuariosService {
     return this.http.get<ListadoUsuarios>(`https://randomuser.me/api/?results=10`);
   }
 
-  getUsuario(id: number) {
-    return this.http.get<ListadoUsuarios>(`https://randomuser.me/api/?results=10` + id);
+  getUsuario(idx: number) {
+    return this.http.get<ListadoUsuarios>(`https://randomuser.me/api/?results=10/${idx}`);
+    // return this.getListaUsers[idx];
   }
 
 }

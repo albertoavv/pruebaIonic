@@ -11,6 +11,7 @@ export interface Info {
 }
 
 export interface Result {
+  idx?: number;
   gender: string;
   name: Name;
   location: Location;
@@ -60,17 +61,17 @@ interface Location {
   timezone: Timezone;
 }
 
-interface Timezone {
+export interface Timezone {
   offset: string;
   description: string;
 }
 
-interface Coordinates {
+export interface Coordinates {
   latitude: string;
   longitude: string;
 }
 
-interface Name {
+export interface Name {
   title: string;
   first: string;
   last: string;
