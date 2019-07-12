@@ -14,8 +14,6 @@ export class UsuarioPage implements OnInit {
   constructor( private activatedRoute: ActivatedRoute, private _usuariosService: UsuariosService) {
     this.activatedRoute.params.subscribe( resp => {
       console.log(resp['id']);
-     // console.log(resp['id']); //sale en consola {id: "5"}
-     // console.log(params['id']);
       this.detalleUser = this._usuariosService.getUsuario(resp['id']);
       console.log(this.detalleUser);
       
