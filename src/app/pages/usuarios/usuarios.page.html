@@ -1,0 +1,19 @@
+<app-header titulo="Listado de usuarios"></app-header>
+
+<ion-content>
+
+    <ion-row>
+        <ion-col>
+            <ion-list>
+                <ion-item *ngFor="let users of usuario; let i = index">
+                    <ion-avatar slot="start">
+                        <ion-img [src]="users.picture.medium"></ion-img>
+
+                    </ion-avatar>
+                    <ion-label>{{ users.name.first }} {{ users.name.last}}</ion-label>
+                    <ion-button (click)="verDetalle( i )" color="primary">Ver mas</ion-button>
+                </ion-item>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+</ion-content>

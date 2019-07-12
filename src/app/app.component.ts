@@ -16,10 +16,25 @@ export class AppComponent {
       icon: 'home'
     },
     {
+      title: 'Usuario',
+      url: '/usuarios',
+      icon: 'contacts'
+    },
+   /* {
       title: 'List',
       url: '/list',
       icon: 'list'
-    }
+    },
+   /* {
+      title: 'Sobre Nosotros',
+      url: '/about',
+      icon: 'people'
+    },
+    {
+      title: 'Contactenos',
+      url: '/contact',
+      icon: 'contact'
+    }*/
   ];
 
   constructor(

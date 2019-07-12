@@ -9,13 +9,17 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: './home/home.module#HomePageModule'
+    loadChildren: './pages/home/home.module#HomePageModule'
   },
   {
     path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  }
-];
+    loadChildren: './pages/list/list.module#ListPageModule'
+  },
+  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' },
+  { path: 'contact', loadChildren: './pages/contact/contact.module#ContactPageModule' },
+  { path: 'usuarios', loadChildren: './pages/usuarios/usuarios.module#UsuariosPageModule' },
+  { path: 'usuario/:id', loadChildren: './pages/usuario/usuario.module#UsuarioPageModule' }
+  ];
 
 @NgModule({
   imports: [
