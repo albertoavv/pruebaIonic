@@ -11,7 +11,6 @@ export interface Info {
 }
 
 export interface Result {
-  idx?: number;
   gender: string;
   name: Name;
   location: Location;
@@ -21,7 +20,7 @@ export interface Result {
   registered: Dob;
   phone: string;
   cell: string;
-  id: Id;
+  id: string;
   picture: Picture;
   nat: string;
 }

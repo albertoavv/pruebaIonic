@@ -21,7 +21,7 @@ export interface ListadoUsuarios {
     registered: Dob;
     phone: string;
     cell: string;
-    id: Id;
+    id: string;
     picture: Picture;
     nat: string;
   }
