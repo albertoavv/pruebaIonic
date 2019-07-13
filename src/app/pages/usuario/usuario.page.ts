@@ -10,7 +10,7 @@ import { Result } from '../../interfaces/interfaces';
 })
 export class UsuarioPage implements OnInit {
 
-  detalleUser: any;
+  detalleUser: Result;
 
   constructor( private activatedRoute: ActivatedRoute, private _usuariosService: UsuariosService) {
     this.activatedRoute.params.subscribe( resp => {
