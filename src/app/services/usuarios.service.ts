@@ -20,7 +20,6 @@ export class UsuariosService {
 
   getUsuario(id: string) {
     return this.http.get<ListadoUsuarios>(`${this.url}/${id}`);
-    // return this.getListaUsers[idx];
   }
 
 }

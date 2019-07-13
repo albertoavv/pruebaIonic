@@ -11,20 +11,10 @@ import { Result } from '../../interfaces/interfaces';
 })
 export class UsuarioPage implements OnInit {
 
-  //usuario: UsuarioModel = new UsuarioModel();
 
   detalleUser: Result;
 
-  constructor( private activatedRoute: ActivatedRoute, private _usuariosService: UsuariosService) {
-   /* this.activatedRoute.params.subscribe( resp => {
-      console.log(resp['id']);
-      this._usuariosService.getUsuario(resp['id']).subscribe( usuario => {
-        console.log(usuario);
-        this.detalleUser = usuario.results[0];
-      });
-
-    });*/
-   }
+  constructor( private activatedRoute: ActivatedRoute, private _usuariosService: UsuariosService) {}
 
   ngOnInit() {
 
@@ -33,15 +23,10 @@ export class UsuarioPage implements OnInit {
 
     this._usuariosService.getUsuario( id )
         .subscribe((resp: any ) => {
-            //console.log(resp.results[0].email);
             console.log(resp);
-            //this.detalleUser.id = resp.id;
             this.detalleUser = resp.results[0];
-            
-           // console.log(this.detalleUser.picture.thumbnail);
-            
+
         });
-    
 
   }
 
