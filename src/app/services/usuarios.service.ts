@@ -8,18 +8,22 @@ import { map } from 'rxjs/operators';
 })
 export class UsuariosService {
 
-  private url = 'https://randomuser.me/api/?results=10';
+  private url = 'https://randomuser.me/api';
+  pageList = 0;
 
-  constructor( private http: HttpClient ) { 
+  constructor( private http: HttpClient ) {
 
   }
+  //https://randomuser.me/api/?page=2&results=10&seed=abc
+
 
   getListaUsers(){
-    return this.http.get<ListadoUsuarios>(`${this.url}`);
+    this.pageList++;
+    return this.http.get<ListadoUsuarios>(`${this.url}/?page=${ this.pageList }&results=50`);
   }
 
   getUsuario(id: string) {
-    return this.http.get<ListadoUsuarios>(`${this.url}/${id}`);
+    return this.http.get<ListadoUsuarios>(`${this.url}/?results=10/${id}`);
   }
 
 }
