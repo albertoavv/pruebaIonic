@@ -12,16 +12,16 @@ import { Result } from '../../interfaces/interfaces';
 export class UsuarioPage implements OnInit {
 
 
-  detalleUser: Result;
+  detalleUser: Result = {};
 
-  constructor( private activatedRoute: ActivatedRoute, private _usuariosService: UsuariosService) {}
+  constructor( private activatedRoute: ActivatedRoute, private usuariosService: UsuariosService) {}
 
   ngOnInit() {
 
     const id  = this.activatedRoute.snapshot.paramMap.get('id');
     console.log(id);
 
-    this._usuariosService.getUsuario( id )
+    this.usuariosService.getUsuario( id )
         .subscribe((resp: any ) => {
             console.log(resp);
             this.detalleUser = resp.results[0];

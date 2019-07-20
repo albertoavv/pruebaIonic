@@ -9,12 +9,12 @@
                         <ion-card>
                             <ion-card-content>
                                 <ion-thumbnail slot="start">
-                                    <ion-img [src]="detalleUser.picture.large"></ion-img>
+                                    <ion-img [src]="detalleUser?.picture?.large"></ion-img>
                                 </ion-thumbnail>
                                 <ion-card-header>
-                                    <ion-card-title>Nombre y Apellidos: {{ detalleUser.name.first }} {{ detalleUser.name.last }} </ion-card-title>
-                                    <ion-card-title>Email: {{ detalleUser.email }} </ion-card-title>
-                                    <ion-card-title color="{{detalleUser.gender === 'female' ? 'primary' : 'danger'}}">{{ detalleUser.gender }} </ion-card-title>
+                                    <ion-card-title>Nombre y Apellidos: {{ detalleUser?.name?.first }} {{ detalleUser?.name?.last }} </ion-card-title>
+                                    <ion-card-title>Email: {{ detalleUser?.email }} </ion-card-title>
+                                    <ion-card-title color="{{detalleUser?.gender === 'female' ? 'primary' : 'danger'}}">{{ detalleUser?.gender }} </ion-card-title>
                                 </ion-card-header>
                             </ion-card-content>
                         </ion-card>

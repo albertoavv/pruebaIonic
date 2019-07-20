@@ -11,24 +11,24 @@ export interface Info {
 }
 
 export interface Result {
-  gender: string;
-  name: Name;
-  location: Location;
-  email: string;
-  login: Login;
-  dob: Dob;
-  registered: Dob;
-  phone: string;
-  cell: string;
-  id: string;
-  picture: Picture;
-  nat: string;
+  gender?: string;
+  name?: Name;
+  location?: Location;
+  email?: string;
+  login?: Login;
+  dob?: Dob;
+  registered?: Dob;
+  phone?: string;
+  cell?: string;
+  id?: string;
+  picture?: Picture;
+  nat?: string;
 }
 
-export interface Picture {
-  large: string;
-  medium: string;
-  thumbnail: string;
+ export interface Picture {
+  large?: string;
+  medium?: string;
+  thumbnail?: string;
 }
 
 interface Id {
