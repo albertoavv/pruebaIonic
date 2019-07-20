@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Result } from "../interfaces/interfaces";
+import { Result, ListadoUsuarios } from '../interfaces/interfaces';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -19,7 +19,7 @@ export class UsuariosService {
 
   getListaUsers(){
     this.pageList++;
-    return this.http.get<Result>(`${this.url}/?page=${ this.pageList }&results=50`);
+    return this.http.get<ListadoUsuarios>(`${this.url}/?page=${ this.pageList }&results=50`);
   }
 
   getUsuario(id: string) {

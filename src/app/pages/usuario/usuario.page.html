@@ -3,24 +3,7 @@
 <ion-content>
     <ion-row>
         <ion-col>
-            <ion-grid fixed>
-                <ion-row size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
-                    <ion-col>
-                        <ion-card>
-                            <ion-card-content>
-                                <ion-thumbnail slot="start">
-                                    <ion-img [src]="detalleUser?.picture?.large"></ion-img>
-                                </ion-thumbnail>
-                                <ion-card-header>
-                                    <ion-card-title>Nombre y Apellidos: {{ detalleUser?.name?.first }} {{ detalleUser?.name?.last }} </ion-card-title>
-                                    <ion-card-title>Email: {{ detalleUser?.email }} </ion-card-title>
-                                    <ion-card-title color="{{detalleUser?.gender === 'female' ? 'primary' : 'danger'}}">{{ detalleUser?.gender }} </ion-card-title>
-                                </ion-card-header>
-                            </ion-card-content>
-                        </ion-card>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
+            <app-detalle-usuario></app-detalle-usuario>
         </ion-col>
     </ion-row>
 </ion-content>
