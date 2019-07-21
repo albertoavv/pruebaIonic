@@ -12,14 +12,21 @@ import { DataLocalService } from '../../services/data-local.service';
 export class DetalleUsuarioComponent implements OnInit {
 
   @Input() detalleUser: Result = {};
+
+  estrella = 'star-outline';
   constructor(private activatedRoute: ActivatedRoute,
               private usuariosService: UsuariosService,
               private dataLocalService: DataLocalService ) { }
 
   ngOnInit() {
 
+   this.dataLocalService.existeUsuario( this.id )
+    .then( existe => this.estrella = (existe) ? 'star' : 'star-outline');
+
+    
     const id  = this.activatedRoute.snapshot.paramMap.get('id');
     console.log(id);
+
 
     this.usuariosService.getUsuario( id )
         .subscribe((resp: any ) => {
