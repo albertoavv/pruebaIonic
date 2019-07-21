@@ -1,39 +1,5 @@
 <app-header titulo="Listado de usuarios"></app-header>
 
 <ion-content>
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button>
-            <ion-icon name="add"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-list side="top">
-            <ion-fab-button color="facebook">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </ion-fab-button>
-            <ion-fab-button color="twitter">
-                <ion-icon name="logo-twitter"></ion-icon>
-            </ion-fab-button>
-            <ion-fab-button color="youtube">
-                <ion-icon name="logo-youtube"></ion-icon>
-            </ion-fab-button>
-        </ion-fab-list>
-    </ion-fab>
-    <ion-row>
-        <ion-col>
-            <ion-list>
-                <ion-item *ngFor="let users of usuario; let i = index">
-                    <ion-avatar slot="start">
-                        <ion-img [src]="users.picture.medium"></ion-img>
-
-                    </ion-avatar>
-                    <ion-label>{{ users.name.first }} {{ users.name.last}}</ion-label>
-                    <ion-label color="{{users.gender === 'female' ? 'primary' : 'danger'}}" position="fixed">{{ users.gender}}</ion-label>
-                    <ion-button [routerLink]="['/usuario', i]" color="primary">Ver mas</ion-button>
-                </ion-item>
-            </ion-list>
-            <ion-infinite-scroll threshold="150" (ionInfinite)="loadData($event)">
-                <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Cargando ...">
-                </ion-infinite-scroll-content>
-            </ion-infinite-scroll>
-        </ion-col>
-    </ion-row>
+    <app-usuarios-favoritos [usuario]="usuario"></app-usuarios-favoritos>
 </ion-content>

@@ -20,10 +20,10 @@ export class AppComponent {
       url: '/usuarios',
       icon: 'contacts'
     },
-   /* {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+    {
+      title: 'Favoritos',
+      url: '/favoritos',
+      icon: 'star'
     },
    /* {
       title: 'Sobre Nosotros',

@@ -45,6 +45,8 @@ export class DataLocalService {
     
     this.presentToast( mensaje );
     this.storage.set('usuarios', this.usuarios);
+
+    return !existe;
   }
   
   async cargarFavoritos(){

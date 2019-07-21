@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' },
   { path: 'contact', loadChildren: './pages/contact/contact.module#ContactPageModule' },
   { path: 'usuarios', loadChildren: './pages/usuarios/usuarios.module#UsuariosPageModule' },
-  { path: 'usuario/:id', loadChildren: './pages/usuario/usuario.module#UsuarioPageModule' }
+  { path: 'usuario/:id', loadChildren: './pages/usuario/usuario.module#UsuarioPageModule' },
+  { path: 'favoritos', loadChildren: './pages/favoritos/favoritos.module#FavoritosPageModule' }
   ];
 
 @NgModule({

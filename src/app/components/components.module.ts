@@ -3,19 +3,25 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { IonicModule } from '@ionic/angular';
 import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.component';
+import { RouterModule } from '@angular/router';
+import { UsuariosFavoritosComponent } from './usuarios-favoritos/usuarios-favoritos.component';
+
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    DetalleUsuarioComponent
+    DetalleUsuarioComponent,
+    UsuariosFavoritosComponent
   ],
-  exports:[
+  exports: [
     HeaderComponent,
-    DetalleUsuarioComponent
+    DetalleUsuarioComponent,
+    UsuariosFavoritosComponent
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    RouterModule
   ]
 })
 export class ComponentsModule { }

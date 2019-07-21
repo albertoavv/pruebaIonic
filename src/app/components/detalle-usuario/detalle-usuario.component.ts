@@ -20,10 +20,9 @@ export class DetalleUsuarioComponent implements OnInit {
 
   ngOnInit() {
 
-   this.dataLocalService.existeUsuario( this.id )
+   this.dataLocalService.existeUsuario( this.detalleUser )
     .then( existe => this.estrella = (existe) ? 'star' : 'star-outline');
 
-    
     const id  = this.activatedRoute.snapshot.paramMap.get('id');
     console.log(id);
 
@@ -38,6 +37,7 @@ export class DetalleUsuarioComponent implements OnInit {
 
 
   favorito(){
-    this.dataLocalService.guardarUsuario(  this.detalleUser );
+   const existe =  this.dataLocalService.guardarUsuario(  this.detalleUser );
+   this.estrella = (existe) ? 'star' : 'star-outline';
   }
 }
