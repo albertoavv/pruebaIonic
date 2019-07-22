@@ -9,12 +9,14 @@ import { DataLocalService } from '../../services/data-local.service';
 })
 export class FavoritosPage implements OnInit {
 
-  usuario: Result[] = [];
+  usuariofav: Result[] = [];
 
   constructor(private dataLocalService: DataLocalService) { }
 
   async ngOnInit() {
-    this.usuario = await this.dataLocalService.cargarFavoritos();
+    this.usuariofav = await this.dataLocalService.cargarFavoritos();
+    console.log(this.usuariofav);
+
   }
 
 }
